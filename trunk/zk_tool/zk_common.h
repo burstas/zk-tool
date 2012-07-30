@@ -9,6 +9,7 @@
 #include <signal.h>
 #include <sys/wait.h>
 #include <fcntl.h>
+#include <string.h>
 
 void output(FILE* fd, int result, int zkstate, char const* format, char const* msg);
 
