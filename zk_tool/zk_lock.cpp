@@ -7,7 +7,7 @@ string g_strPrev="lock";
 bool   g_bWatchMaster = false;
 list<string> g_auth;
 list<string>  g_priv;
-///-1£ºÊ§°Ü£»0£ºhelp£»1£º³É¹¦
+///-1Â£ÂºÃŠÂ§Â°ÃœÂ£Â»0Â£ÂºhelpÂ£Â»1Â£ÂºÂ³Ã‰Â¹Â¦
 int parseArg(int argc, char**argv)
 {
     ZkGetOpt cmd_option(argc, argv, "H:n:a:l:p:hm");
@@ -122,8 +122,8 @@ void get_lock(bool bLock, void* cbdata){
 }
 
 //0:success
-//1:²ÎÊı´íÎó
-//2:Ö´ĞĞ½á¹û´íÎó
+//1:Â²ÃÃŠÃ½Â´Ã­ÃÃ³
+//2:Ã–Â´ÃÃÂ½Ã¡Â¹Ã»Â´Ã­ÃÃ³
 int main(int argc ,char** argv)
 {
     int iRet = parseArg(argc, argv);
@@ -186,7 +186,7 @@ int main(int argc ,char** argv)
 			}
 			pacl = &acl;
 		}
-        if (0 != locker.init(&zk, (char*)g_strNode.c_str(), g_strPrev, get_lock, &zk, pacl))
+        if (0 != locker.init(&zk, (char*)g_strNode.c_str(), g_strPrev, get_lock, &locker, pacl))
         {
             printf("failure to init zk lock\n");
             return 2;
