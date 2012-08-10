@@ -4,13 +4,13 @@
 string g_strHost;
 string g_strNode;
 string g_strPrev="lock";
-bool   g_bWatchMaster = false;
+unsigned int  g_watchType = ZkLocker::ZK_WATCH_TYPE_PREV;
 list<string> g_auth;
 list<string>  g_priv;
 ///-1£ºÊ§°Ü£»0£ºhelp£»1£º³É¹¦
 int parseArg(int argc, char**argv)
 {
-    ZkGetOpt cmd_option(argc, argv, "H:n:a:l:p:hm");
+    ZkGetOpt cmd_option(argc, argv, "H:n:a:l:p:m:h");
     int option;
     while( (option = cmd_option.next()) != -1)
     {
@@ -29,7 +29,7 @@ int parseArg(int argc, char**argv)
 			printf("    read              : read for any user;\n");
 			printf("    user:passwd:acrwd : digest auth for [user] with [passwd], \n");
 			printf("          admin(a), create(c), read(r), write(w), delete(d)\n");
-            printf("-m: watch master node\n");
+            printf("-m: watch type, 1: watch mater;2:watch prev node;3:watch the parent node\n");
             printf("-h: help\n");
             return 0;
         case 'H':
@@ -73,7 +73,13 @@ int parseArg(int argc, char**argv)
             g_strPrev = cmd_option.opt_arg();
             break;
         case 'm':
-            g_bWatchMaster = true;
+            g_watchType = strtoul(cmd_option.opt_arg(), NULL, 10);
+            if ((g_watchType != ZkLocker::ZK_WATCH_TYPE_MASTER) &&
+                (g_watchType != ZkLocker::ZK_WATCH_TYPE_PREV) &&
+                (g_watchType != ZkLocker::ZK_WATCH_TYPE_ROOT))
+            {
+                g_watchType = ZkLocker::ZK_WATCH_TYPE_PREV;
+            }
             break;
         case ':':
             printf("%c requires an argument.\n", cmd_option.opt_opt ());
@@ -196,7 +202,7 @@ int main(int argc ,char** argv)
         string lockPath;
         string ownPath;
         printf("Starting to lock......");
-        iRet = locker.lock(g_bWatchMaster);
+        iRet = locker.lock(g_watchType);
         string strSelf;
         string strOwner;
         string strPrev;
@@ -209,7 +215,7 @@ int main(int argc ,char** argv)
             }
             if (0 != iRet){
                 printf("Failure to lock, code=%d\n", iRet);
-                iRet = locker.lock(g_bWatchMaster);
+                iRet = locker.lock(g_watchType);
             }
             locker.getSelfNode(strSelf);
             locker.getOwnerNode(strOwner);
