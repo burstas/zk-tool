@@ -1,4 +1,4 @@
-#include "zk_common.h"
+﻿#include "zk_common.h"
 #include "ZkLocker.h"
 
 string g_strHost;
@@ -7,7 +7,7 @@ string g_strPrev="lock";
 unsigned int  g_watchType = ZkLocker::ZK_WATCH_TYPE_PREV;
 list<string> g_auth;
 list<string>  g_priv;
-///-1£ºÊ§°Ü£»0£ºhelp£»1£º³É¹¦
+///-1拢潞脢搂掳脺拢禄0拢潞help拢禄1拢潞鲁脡鹿娄
 int parseArg(int argc, char**argv)
 {
     ZkGetOpt cmd_option(argc, argv, "H:n:a:l:p:m:h");
@@ -128,8 +128,8 @@ void get_lock(bool bLock, void* cbdata){
 }
 
 //0:success
-//1:²ÎÊý´íÎó
-//2:Ö´ÐÐ½á¹û´íÎó
+//1:虏脦脢媒麓铆脦贸
+//2:脰麓脨脨陆谩鹿没麓铆脦贸
 int main(int argc ,char** argv)
 {
     int iRet = parseArg(argc, argv);

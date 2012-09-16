@@ -1,11 +1,11 @@
-#include "zk_common.h"
+ï»¿#include "zk_common.h"
 
 
 string g_strHost;
 string g_strNode;
 string g_strOut;
 list<string> g_auth;
-///-1£ºÊ§°Ü£»0£ºhelp£»1£º³É¹¦
+///-1ï¼šå¤±è´¥ï¼›0ï¼šhelpï¼›1ï¼šæˆåŠŸ
 int parseArg(int argc, char**argv)
 {
 	ZkGetOpt cmd_option(argc, argv, "H:n:a:o:h");
@@ -88,8 +88,8 @@ int parseArg(int argc, char**argv)
 
 
 //0:success
-//1:²ÎÊı´íÎó
-//2:Ö´ĞĞ½á¹û´íÎó
+//1:å‚æ•°é”™è¯¯
+//2:æ‰§è¡Œç»“æœé”™è¯¯
 int main(int argc ,char** argv)
 {
 	FILE * outFd = NULL;
