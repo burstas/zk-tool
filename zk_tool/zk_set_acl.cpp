@@ -1,4 +1,4 @@
-#include "zk_common.h"
+ï»¿#include "zk_common.h"
 
 
 string g_strHost;
@@ -11,7 +11,7 @@ bool   g_append = true;
 bool   g_remove = false;
 bool   g_set = false;
 bool   g_recursive=false;
-///-1£ºÊ§°Ü£»0£ºhelp£»1£º³É¹¦
+///-1ï¼šå¤±è´¥ï¼›0ï¼šhelpï¼›1ï¼šæˆåŠŸ
 int parseArg(int argc, char**argv)
 {
 	ZkGetOpt cmd_option(argc, argv, "H:n:a:o:l:m:hr");
@@ -33,7 +33,7 @@ int parseArg(int argc, char**argv)
 			printf("    digest:user:passwd:acrwd : digest auth for [user] with [passwd], \n");
 			printf("          admin(a), create(c), read(r), write(w), delete(d)\n");
 			printf("    ip:ip_addr[/bits]:acrwd : ip auth for ip or ip subnet\n"); 
-			printf("-m: set Acl mode. [append]¡¢[set]¡¢[remove] can be set¡£default is append.\n");
+			printf("-m: set Acl mode. [append]ã€[set]ã€[remove] can be setã€‚default is append.\n");
 			printf("-o: output file, default is stdout\n");
             printf("-r: recursive to set child acl.\n");
 			printf("-v: node's version\n");
@@ -174,8 +174,8 @@ public:
 
 
 //0:success
-//1:²ÎÊı´íÎó
-//2:Ö´ĞĞ½á¹û´íÎó
+//1:å‚æ•°é”™è¯¯
+//2:æ‰§è¡Œç»“æœé”™è¯¯
 int main(int argc ,char** argv)
 {
 	FILE * outFd = NULL;

@@ -1,4 +1,4 @@
-#include "zk_common.h"
+ï»¿#include "zk_common.h"
 void output(FILE* fd, int result, int zkstate, char const* format, char const* msg)
 {
 	if (fd)
@@ -45,7 +45,7 @@ bool readFile(string const& strFileName, string& strData)
 }
 
 
-///¹¹Ôìº¯Êı
+///æ„é€ å‡½æ•°
 ZkGetOpt::ZkGetOpt (int argc,
 					  char **argv,
 					  char const* optstring)
@@ -117,22 +117,22 @@ int ZkGetOpt::next()
 	return m_opt;
 }
 
-///»ñÈ¡optionµÄ²ÎÊı
+///è·å–optionçš„å‚æ•°
 char* ZkGetOpt::opt_arg (void) const
 {
 	return optarg;
 }
-///·µ»Øµ±Ç°µÄoption
+///è¿”å›å½“å‰çš„option
 int ZkGetOpt::opt_opt (void) const
 {   
 	return m_opt;
 }
-///·µ»Øµ±Ç°²ÎÊıµÄindex
+///è¿”å›å½“å‰å‚æ•°çš„index
 int ZkGetOpt::opt_ind (void) const
 {
 	return optind;
 }
-///·µ»Øµ±Ç°µÄlong optionÃû
+///è¿”å›å½“å‰çš„long optionå
 char const* ZkGetOpt::long_option() const
 {
 	if (m_longindex < m_longOptionsNum) return m_longOptions[m_longindex].name;

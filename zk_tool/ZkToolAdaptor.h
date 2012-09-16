@@ -1,4 +1,4 @@
-#ifndef __ZK_TOOL_ADAPTOR_H__
+ï»¿#ifndef __ZK_TOOL_ADAPTOR_H__
 #define __ZK_TOOL_ADAPTOR_H__
 
 #include "ZkAdaptor.h"
@@ -6,43 +6,43 @@
 class ZkToolAdaptor:public ZkAdaptor
 {
 public:
-	///¹¹Ôìº¯Êı
+	///æ„é€ å‡½æ•°
 	ZkToolAdaptor(string const& strHost,
 		uint32_t uiRecvTimeout=ZK_DEF_RECV_TIMEOUT_MILISECOND);
-	///Îö¹¹º¯Êı
+	///ææ„å‡½æ•°
 	virtual ~ZkToolAdaptor(); 
-	///Á¬½Ó½¨Á¢µÄ»Øµ÷º¯Êı£¬ÓĞµ×²ãµÄzkÏß³Ìµ÷ÓÃ
+	///è¿æ¥å»ºç«‹çš„å›è°ƒå‡½æ•°ï¼Œæœ‰åº•å±‚çš„zkçº¿ç¨‹è°ƒç”¨
 	virtual void onConnect()
 	{
 		printf("Success to connect %s\n", getHost().c_str());
 	}
 
-	///ÕıÔÚ½¨Á¢ÁªÏµµÄ»Øµ÷º¯Êı£¬ÓĞµ×²ãµÄzkÏß³Ìµ÷ÓÃ
+	///æ­£åœ¨å»ºç«‹è”ç³»çš„å›è°ƒå‡½æ•°ï¼Œæœ‰åº•å±‚çš„zkçº¿ç¨‹è°ƒç”¨
 	virtual void onAssociating()
 	{
 		printf("Associating to zk %s\n", getHost().c_str());
 	}
-	///ÕıÔÚ½¨Á¢Á¬½ÓµÄ»Øµ÷º¯Êı£¬ÓĞµ×²ãµÄzkÏß³Ìµ÷ÓÃ
+	///æ­£åœ¨å»ºç«‹è¿æ¥çš„å›è°ƒå‡½æ•°ï¼Œæœ‰åº•å±‚çš„zkçº¿ç¨‹è°ƒç”¨
 	virtual void onConnecting()
 	{
 		printf("Connecting to zk %s\n", getHost().c_str());
 	}
 
-	///¼øÈ¨Ê§°ÜµÄ»Øµ÷º¯Êı£¬ÓĞµ×²ãµÄzkÏß³Ìµ÷ÓÃ
+	///é‰´æƒå¤±è´¥çš„å›è°ƒå‡½æ•°ï¼Œæœ‰åº•å±‚çš„zkçº¿ç¨‹è°ƒç”¨
 	virtual void onFailAuth()
 	{
 		printf("Failure auth to zk %s\n", getHost().c_str());
 	}
 
-	///SessionÊ§Ğ§µÄ»Øµ÷º¯Êı£¬ÓĞµ×²ãµÄzkÏß³Ìµ÷ÓÃ
+	///Sessionå¤±æ•ˆçš„å›è°ƒå‡½æ•°ï¼Œæœ‰åº•å±‚çš„zkçº¿ç¨‹è°ƒç”¨
 	virtual void onExpired()
 	{
 		printf("Expired to zk %s\n", getHost().c_str());
 	}
 	/**
-	*@brief  watchµÄnode´´½¨ÊÂ¼şµÄ»Øµ÷º¯Êı£¬ÓĞµ×²ãµÄzkÏß³Ìµ÷ÓÃ¡£Ó¦ÓÃÓÚzoo_existsµÄwatch¡£
-	*@param [in] zkµÄwatcherµÄstate
-	*@param [in] path watchµÄpath.
+	*@brief  watchçš„nodeåˆ›å»ºäº‹ä»¶çš„å›è°ƒå‡½æ•°ï¼Œæœ‰åº•å±‚çš„zkçº¿ç¨‹è°ƒç”¨ã€‚åº”ç”¨äºzoo_existsçš„watchã€‚
+	*@param [in] zkçš„watcherçš„state
+	*@param [in] path watchçš„path.
 	*@return void.
 	*/
 	virtual void onNodeCreated(int state, char const* path)
@@ -51,9 +51,9 @@ public:
 	}
 
 	/**
-	*@brief  watchµÄnodeÉ¾³ıÊÂ¼şµÄ»Øµ÷º¯Êı£¬ÓĞµ×²ãµÄzkÏß³Ìµ÷ÓÃ¡£Ó¦ÓÃÓÚ zoo_existsÓëzoo_getµÄwatch¡£
-	*@param [in] zkµÄwatcherµÄstate
-	*@param [in] path watchµÄpath.
+	*@brief  watchçš„nodeåˆ é™¤äº‹ä»¶çš„å›è°ƒå‡½æ•°ï¼Œæœ‰åº•å±‚çš„zkçº¿ç¨‹è°ƒç”¨ã€‚åº”ç”¨äº zoo_existsä¸zoo_getçš„watchã€‚
+	*@param [in] zkçš„watcherçš„state
+	*@param [in] path watchçš„path.
 	*@return void.
 	*/
 	virtual void onNodeDeleted(int state, char const* path)
@@ -62,9 +62,9 @@ public:
 	}
 
 	/**
-	*@brief  watchµÄnodeĞŞ¸ÄÊÂ¼şµÄ»Øµ÷º¯Êı£¬ÓĞµ×²ãµÄzkÏß³Ìµ÷ÓÃ¡£Ó¦ÓÃÓÚ zoo_existsÓëzoo_getµÄwatch¡£
-	*@param [in] zkµÄwatcherµÄstate
-	*@param [in] path watchµÄpath.
+	*@brief  watchçš„nodeä¿®æ”¹äº‹ä»¶çš„å›è°ƒå‡½æ•°ï¼Œæœ‰åº•å±‚çš„zkçº¿ç¨‹è°ƒç”¨ã€‚åº”ç”¨äº zoo_existsä¸zoo_getçš„watchã€‚
+	*@param [in] zkçš„watcherçš„state
+	*@param [in] path watchçš„path.
 	*@return void.
 	*/
 	virtual void onNodeChanged(int state, char const* path)
@@ -73,9 +73,9 @@ public:
 	}
 
 	/**
-	*@brief  watchµÄnodeº¢×Ó±ä¸üÊÂ¼şµÄ»Øµ÷º¯Êı£¬ÓĞµ×²ãµÄzkÏß³Ìµ÷ÓÃ¡£Ó¦ÓÃÓÚzoo_get_childrenµÄwatch¡£
-	*@param [in] zkµÄwatcherµÄstate
-	*@param [in] path watchµÄpath.
+	*@brief  watchçš„nodeå­©å­å˜æ›´äº‹ä»¶çš„å›è°ƒå‡½æ•°ï¼Œæœ‰åº•å±‚çš„zkçº¿ç¨‹è°ƒç”¨ã€‚åº”ç”¨äºzoo_get_childrençš„watchã€‚
+	*@param [in] zkçš„watcherçš„state
+	*@param [in] path watchçš„path.
 	*@return void.
 	*/
 	virtual void onNodeChildChanged(int state, char const* path)
@@ -84,9 +84,9 @@ public:
 	}
 
 	/**
-	*@brief  zkÈ¡ÏûÄ³¸öwathcµÄÍ¨ÖªÊÂ¼şµÄ»Øµ÷º¯Êı£¬ÓĞµ×²ãµÄzkÏß³Ìµ÷ÓÃ¡£
-	*@param [in] zkµÄwatcherµÄstate
-	*@param [in] path watchµÄpath.
+	*@brief  zkå–æ¶ˆæŸä¸ªwathcçš„é€šçŸ¥äº‹ä»¶çš„å›è°ƒå‡½æ•°ï¼Œæœ‰åº•å±‚çš„zkçº¿ç¨‹è°ƒç”¨ã€‚
+	*@param [in] zkçš„watcherçš„state
+	*@param [in] path watchçš„path.
 	*@return void.
 	*/
 	virtual void onNoWatching(int state, char const* path)
@@ -94,7 +94,7 @@ public:
 		printf("Node[%s]'s watch is removed for zk %s, state=%d\n", path, getHost().c_str(), state);
 	}
 
-	///ÆäËûÏûÏ¢
+	///å…¶ä»–æ¶ˆæ¯
 	virtual void onOtherEvent(int type, int state, const char *path){
 		printf("Recv event for %s, type=%d  state=%d  path=%s\n", getHost().c_str(), type, state, path);
 	}

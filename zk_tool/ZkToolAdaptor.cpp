@@ -1,11 +1,11 @@
-#include "ZkToolAdaptor.h"
+ï»¿#include "ZkToolAdaptor.h"
 
-///¹¹Ôìº¯Êı
+///æ„é€ å‡½æ•°
 ZkToolAdaptor::ZkToolAdaptor(string const& strHost, uint32_t uiRecvTimeout):ZkAdaptor(strHost, uiRecvTimeout)
 {
 
 }
-///Îö¹¹º¯Êı
+///ææ„å‡½æ•°
 ZkToolAdaptor::~ZkToolAdaptor()
 {
 

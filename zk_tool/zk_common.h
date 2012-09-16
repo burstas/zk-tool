@@ -1,4 +1,4 @@
-#ifndef __ZK_COMMON_H__
+ï»¿#ifndef __ZK_COMMON_H__
 #define __ZK_COMMON_H__
 
 #include "ZkToolAdaptor.h"
@@ -28,27 +28,27 @@ public:
 		/// option character in optstring.
 		ARG_OPTIONAL = 2
 	};
-	///¹¹Ôìº¯Êı
+	///æ„é€ å‡½æ•°
 	ZkGetOpt (int argc,
 		char **argv,
 		char const* optstring = "");
-	///Îö¹¹º¯Êı
+	///ææ„å‡½æ•°
 	~ZkGetOpt (void);
 public:
-	///ÉèÖÃlong option¶ÔÓ¦µÄshort option
+	///è®¾ç½®long optionå¯¹åº”çš„short option
 	int long_option (char const *name, int short_option, int has_arg = NO_ARG);
 	/**
-	@brief »ñÈ¡ÏÂÒ»¸ö²ÎÊı
-	@return Óëgetopt_long()ÏàÍ¬
+	@brief è·å–ä¸‹ä¸€ä¸ªå‚æ•°
+	@return ä¸getopt_long()ç›¸åŒ
 	*/
 	int next();
-	///»ñÈ¡optionµÄ²ÎÊı
+	///è·å–optionçš„å‚æ•°
 	char *opt_arg (void) const;
-	///·µ»Øµ±Ç°µÄoption
+	///è¿”å›å½“å‰çš„option
 	int opt_opt (void) const;
-	///·µ»Øµ±Ç°²ÎÊıµÄindex
+	///è¿”å›å½“å‰å‚æ•°çš„index
 	int opt_ind (void) const;
-	///·µ»Øµ±Ç°µÄlong optionÃû
+	///è¿”å›å½“å‰çš„long optionå
 	char const* long_option() const;
 private:
 	int             m_argc;
