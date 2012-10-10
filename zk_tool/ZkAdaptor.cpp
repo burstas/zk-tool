@@ -1,4 +1,4 @@
-﻿#include "ZkAdaptor.h"
+#include "ZkAdaptor.h"
 #include <string.h>
 #include <sstream>
 #include <iostream>
