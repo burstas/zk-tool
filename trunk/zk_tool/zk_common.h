@@ -1,4 +1,4 @@
-﻿#ifndef __ZK_COMMON_H__
+#ifndef __ZK_COMMON_H__
 #define __ZK_COMMON_H__
 
 #include "ZkToolAdaptor.h"

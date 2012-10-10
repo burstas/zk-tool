@@ -1,4 +1,4 @@
-﻿#include "zk_common.h"
+#include "zk_common.h"
 
 
 string g_strHost;

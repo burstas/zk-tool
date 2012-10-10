@@ -1,4 +1,4 @@
-﻿#ifndef __ZK_TOOL_ADAPTOR_H__
+#ifndef __ZK_TOOL_ADAPTOR_H__
 #define __ZK_TOOL_ADAPTOR_H__
 
 #include "ZkAdaptor.h"
