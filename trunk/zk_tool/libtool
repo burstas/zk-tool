@@ -331,7 +331,7 @@ link_all_deplibs=unknown
 sys_lib_search_path_spec=`echo " /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/ /usr/lib/gcc/i686-pc-linux-gnu/4.4.3/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../../i686-pc-linux-gnu/lib/i686-pc-linux-gnu/4.4.3/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../../i686-pc-linux-gnu/lib/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../i686-pc-linux-gnu/4.4.3/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../ /lib/i686-pc-linux-gnu/4.4.3/ /lib/ /usr/lib/i686-pc-linux-gnu/4.4.3/ /usr/lib/" | $SED -e "s@${gcc_dir}@\${gcc_dir}@g;s@${gcc_ver}@\${gcc_ver}@g"`
 
 # Run-time system search path for libraries
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/local/BerkeleyDB.4.7/lib /usr/local/lib /usr/lib/qt-3.3/lib "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/local/BerkeleyDB.4.7/lib /usr/local/lib /usr/lib/qt-3.3/lib /usr/local/lib "
 
 # Fix the shell variable $srcfile for the compiler.
 fix_srcfile_path=""
@@ -7502,7 +7502,7 @@ link_all_deplibs=unknown
 sys_lib_search_path_spec=`echo " /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/ /usr/lib/gcc/i686-pc-linux-gnu/4.4.3/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../../i686-pc-linux-gnu/lib/i686-pc-linux-gnu/4.4.3/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../../i686-pc-linux-gnu/lib/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../i686-pc-linux-gnu/4.4.3/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../ /lib/i686-pc-linux-gnu/4.4.3/ /lib/ /usr/lib/i686-pc-linux-gnu/4.4.3/ /usr/lib/" | $SED -e "s@${gcc_dir}@\${gcc_dir}@g;s@${gcc_ver}@\${gcc_ver}@g"`
 
 # Run-time system search path for libraries
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/local/BerkeleyDB.4.7/lib /usr/local/lib /usr/lib/qt-3.3/lib "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/local/BerkeleyDB.4.7/lib /usr/local/lib /usr/lib/qt-3.3/lib /usr/local/lib "
 
 # Fix the shell variable $srcfile for the compiler.
 fix_srcfile_path=""
@@ -7813,7 +7813,7 @@ link_all_deplibs=unknown
 sys_lib_search_path_spec=`echo " /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/ /usr/lib/gcc/i686-pc-linux-gnu/4.4.3/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../../i686-pc-linux-gnu/lib/i686-pc-linux-gnu/4.4.3/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../../i686-pc-linux-gnu/lib/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../i686-pc-linux-gnu/4.4.3/ /usr/local/lib/gcc/i686-pc-linux-gnu/4.4.3/../../../ /lib/i686-pc-linux-gnu/4.4.3/ /lib/ /usr/lib/i686-pc-linux-gnu/4.4.3/ /usr/lib/" | $SED -e "s@${gcc_dir}@\${gcc_dir}@g;s@${gcc_ver}@\${gcc_ver}@g"`
 
 # Run-time system search path for libraries
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/local/BerkeleyDB.4.7/lib /usr/local/lib /usr/lib/qt-3.3/lib "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/local/BerkeleyDB.4.7/lib /usr/local/lib /usr/lib/qt-3.3/lib /usr/local/lib "
 
 # Fix the shell variable $srcfile for the compiler.
 fix_srcfile_path=""
