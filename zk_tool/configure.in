@@ -31,7 +31,7 @@ AC_DEFUN([LIBEVENT_DIR],[
         AC_MSG_ERROR( You need to specify the zookeeper directory using --with-zk)
     else
         # make sure that a well known include file exists
-        if test -e $with_zk/include/zookeeper.h; then
+        if test -e $with_zk/zookeeper.h; then
             zk_dir=$with_zk
             AC_MSG_RESULT(zookeeper found!)
         else
@@ -43,7 +43,7 @@ AC_DEFUN([LIBEVENT_DIR],[
         AC_MSG_ERROR( You need to specify the openssl directory using --with-openssl)
     else
         # make sure that a well known include file exists
-        if test -e $with_openssl/include/openssl/ssl.h; then
+        if test -e $with_openssl/ssl.h; then
             openssl_dir=$with_openssl
             AC_MSG_RESULT(openssl found!)
         else
